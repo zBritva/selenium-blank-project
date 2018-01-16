@@ -5,6 +5,15 @@ module.exports = {
         browser.waitForExist ("a.button", dafaultExistTimeout)
         browser.click("a.button")
         browser.pause(1500)
+
+        try {
+            browser.waitForExist('#otherTileText', 1000)
+            browser.click('#otherTileText', 1000)
+        }
+        catch (ex) {
+
+        }
+
         browser.waitForExist("input[name=loginfmt]", dafaultExistTimeout)
 
         browser.setValue("input[name=loginfmt]", login)
@@ -14,7 +23,7 @@ module.exports = {
         browser.setValue('input[name=passwd]', password)
         browser.pause(500)
         browser.click("#idSIButton9")
-        browser.waitForExist('button.optionTab.dashboard.label-med.selected', dafaultExistTimeout)
+        browser.waitForExist('.powerBILogoText', dafaultExistTimeout)
         console.log(`${loginURL}: logined to services`);
     },
 

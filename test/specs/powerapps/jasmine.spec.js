@@ -58,6 +58,11 @@ describe('PowerApps Visual scenario tests', function() {
         // }
     ];
 
+    browser.setViewportSize({
+        width: 1380,
+        height: 1024
+    }, false, () => {});
+
     envParams.forEach(envParam => {
         const login = envParam.login;
         const password = envParam.password;
@@ -85,7 +90,7 @@ describe('PowerApps Visual scenario tests', function() {
                     }
                 }
 
-                browser.call(done);
+                done();
             }, defaultTestTimeout);
 
         });
