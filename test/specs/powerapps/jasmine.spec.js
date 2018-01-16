@@ -63,7 +63,7 @@ describe('PowerApps Visual scenario tests', function() {
         const password = envParam.password;
         // const loginURL: string = `https://${envParam.env}.powerbi.com/?noSignUpCheck=1`;
         const loginURL = 
-            `https://powerbi.microsoft.com/en-us/landing/signin/?ru=https%3A%2F%2Fapp.powerbi.com%2F%3FnoSignUpCheck%3D1`;
+            `https://powerbi.microsoft.com/en-us/landing/signin/?ru=https%3A%2F%2F${envParam.env}.powerbi.com%2F%3FnoSignUpCheck%3D1`;
         const reportURL = `https://${envParam.env}.powerbi.com/groups/me/reports/${envParam.report}/ReportSection`;
 
         describe(`environment ${envParam.env}`, () => {
@@ -77,9 +77,7 @@ describe('PowerApps Visual scenario tests', function() {
 
                 try {
                     loginToPBIServices(loginURL, login, password, dafaultExistTimeout)
-                    .then(() => {
-                        browser.call(done);
-                    });
+                    browser.call(done)
                 } catch (err) {
                     console.error(err.message);
                     if (debugMode) {

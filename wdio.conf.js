@@ -42,12 +42,12 @@ exports.config = {
         // {
         //     browserName: 'firefox'
         // },
-        {
-            browserName: 'internet explorer'
-        },
         // {
-        //     browserName: 'chrome'
-        // }
+        //     browserName: 'internet explorer'
+        // },
+        {
+            browserName: 'chrome'
+        }
     ],
     seleniumInstallArgs: {
         drivers: {
@@ -95,7 +95,7 @@ exports.config = {
     baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 60000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
@@ -151,7 +151,7 @@ exports.config = {
     jasmineNodeOpts: {
         //
         // Jasmine default timeout
-        defaultTimeoutInterval: 10000,
+        defaultTimeoutInterval: 1200000,
         //
         // The Jasmine framework allows interception of each assertion in order to log the state of the application
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
