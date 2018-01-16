@@ -17,6 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "pretest": "selenium-standalone install --version=2.45.0 --baseURL=https://selenium-release.storage.googleapis.com && selenium-standalone install --drivers.chrome.version=2.34 --drivers.chrome.baseURL=https://chromedriver.storage.googleapis.com && selenium-standalone install --drivers.ie.version=3.4.0 --drivers.ie.baseURL=https://selenium-release.storage.googleapis.com",
     "test": "node run.js"
   },
   "author": "",
